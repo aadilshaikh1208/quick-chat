@@ -87,7 +87,7 @@ cd ../client
 npm start
 ```
 
-The client will run on [http://localhost:3000](http://localhost:3000) and the server on [http://localhost:5000](http://localhost:5000) by default.
+The client will run on [http://localhost:5173](http://localhost:5173/) and the server on [http://localhost:5000](http://localhost:5000) by default.
 
 ---
 
