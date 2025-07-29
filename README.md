@@ -37,7 +37,6 @@ A full-stack real-time chat application built with React, Node.js, Express, Mong
 
 ```bash
 git clone https://github.com/aadilshaikh1208/quick-chat
-cd Chat_App
 ```
 
 ### 2. Install dependencies
