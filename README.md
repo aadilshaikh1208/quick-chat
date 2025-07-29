@@ -119,7 +119,6 @@ Chat_App/
 
 ### Auth
 
-- `POST /api/auth/signup` – Register a new user
 - `POST /api/auth/login` – Login
 
 ### User
@@ -154,10 +153,7 @@ Chat_App/
 
 ---
 
-## License
-
-MIT
-
----
 
 ## Author
+
+- **Aadil Shaikh**
