@@ -77,7 +77,7 @@ If you use any environment variables in the client, add them to `client/.env`.
 
 ```bash
 cd server
-npm run server.js
+npm run server
 ```
 
 #### Start the client
