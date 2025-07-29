@@ -6,7 +6,6 @@ import { connectDB } from "./lib/db.js"
 import userRouter from "./routes/userRoutes.js"
 import messageRouter from "./routes/messageRoutes.js"
 import { Server } from "socket.io"
-import { log } from "console"
 
 // Create Express app and http server
 
@@ -34,7 +33,7 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         console.log("User Disconnected", userId)
         delete userSocketMap[userId]
-        io.emit("getOnlineUsers",Object.keys(userSocketMap))
+        io.emit("getOnlineUsers", Object.keys(userSocketMap))
     })
 })
 
@@ -50,7 +49,12 @@ app.use("/api/messages", messageRouter)
 // Connect to Mongodb
 await connectDB()
 
-const PORT = process.env.PORT || 5000
-server.listen(PORT, () => {
-    console.log("Server is running on PORT :" + PORT)
-})
+if (process.env.NODE_ENV !== "production") {
+    const PORT = process.env.PORT || 5000
+    server.listen(PORT, () => {
+        console.log("Server is running on PORT :" + PORT)
+    })
+}
+
+// Export server for vercel
+export default server
